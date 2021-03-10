@@ -21,7 +21,7 @@ export default class Kalkulator extends Component {
             ...this.state,
             tipe: tipe
         }
-        axios.post('http://127.0.0.1:8000/kabataku/', hitung)
+        axios.post('/kabataku', hitung)
             .then(response => {
                 this.setState({
                     ans: response.data['ans']
