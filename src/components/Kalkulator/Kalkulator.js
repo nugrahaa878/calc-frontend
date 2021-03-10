@@ -21,7 +21,7 @@ export default class Kalkulator extends Component {
             ...this.state,
             tipe: tipe
         }
-        axios.post('/kabataku', hitung)
+        axios.post('https://arinugraha.herokuapp.com/kabataku', hitung)
             .then(response => {
                 this.setState({
                     ans: response.data['ans']
